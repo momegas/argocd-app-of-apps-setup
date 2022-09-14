@@ -1,0 +1,7 @@
+bases:
+  - base
+  - apps
+  - repos
+resources:
+  - ingress.yml
+namespace: argocd

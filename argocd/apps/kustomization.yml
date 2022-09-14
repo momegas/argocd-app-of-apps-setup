@@ -1,0 +1,4 @@
+resources:
+  - argocd.yml
+  - cert-manager.yml
+  - cluster-issuer.yml

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: <Change me>
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  type: git
+  url: <Change me> # Your GitHub URL where these manifests are going to be hosted
+  username: <Change me> # Your GitHub username
+  password: <Change me> # Your GitHub token (NOT YOUR PASSWORD). Read more: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token

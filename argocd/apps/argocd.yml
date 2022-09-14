@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd
+spec:
+  destination:
+    name: ""
+    namespace: "argocd"
+    server: "https://kubernetes.default.svc"
+  source:
+    path: argocd
+    repoURL: <Change me> # The repo of your GitOps repository hosting the manifests of your apps
+    targetRevision: HEAD
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
